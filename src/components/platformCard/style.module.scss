@@ -1,9 +1,8 @@
 @import '../../App.module.scss';
 
 .card {
-	// width: 400px;
-	// height: 115px;
 	min-width: 300px;
+	backdrop-filter: blur(4px);
 	
 	
 	.cardContent {

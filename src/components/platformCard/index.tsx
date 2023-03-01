@@ -21,7 +21,7 @@ const PlatformCard: FC<Props> = ({ variant }) => {
 		useRef<HTMLInputElement>(null!);
 	const logoClasses: string = `${styles.logo}`;
 	const bgColor: string =
-		variant === "xbox" ? "rgba(16, 124, 16, 0.93)" : "rgba(0, 112, 209, 0.93)";
+		variant === "xbox" ? "rgba(16, 124, 16, 0.93)" : "rgba(0, 112, 209, 0.7)";
 
 	const handleButtonClick = () => {
 		console.log(inputRef.current.value);
