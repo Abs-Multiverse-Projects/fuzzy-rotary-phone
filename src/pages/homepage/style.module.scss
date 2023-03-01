@@ -1,0 +1,32 @@
+@import '../../App.module.scss';
+
+@font-face {
+	font-family: 'Cyberpunk';
+	src: url('../../assets/fonts/thunder/Thunder-BoldLC.ttf');
+}
+
+
+.container {
+	height: 100vh;
+	background: black;
+	background-image: url('../../assets/bg.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-inline: 50px;
+
+	.mainTitle {
+		@include flex-container(row, center, center);
+		font-family: 'Cyberpunk';
+		font-size: 80px;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+		padding: 20px;
+	}
+
+	.grid {
+		@include flex-container(row, center, center);
+		gap: min(40px, 5%);
+		flex-wrap: wrap;
+	}
+}

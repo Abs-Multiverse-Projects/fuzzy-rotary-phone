@@ -1,8 +1,13 @@
-import "./App.css";
 import { FC } from "react";
+import Home from "./pages/homepage";
+import styles from "./App.module.scss";
 
 const App: FC = () => {
-	return <p>This is an empty react app</p>;
+	return (
+		<>
+			<Home />
+		</>
+	);
 };
 
 export default App;
