@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import styles from "./style.module.scss";
-import { ReactComponent as Logo } from "../../assets/burger-menu.svg";
+import BurgerMenuIcon from "../svg/BurgerMenuIcon";
 import Drawer from "@mui/material/Drawer";
 
 const Navbar: FC = () => {
@@ -8,15 +8,17 @@ const Navbar: FC = () => {
 
 	const handleClick = () => {
 		setShowMenu(true);
-		console.log(showMenu);
 	};
 
 	return (
 		<div className={styles.mainContainer}>
-			<Logo className={styles.svg} onClick={handleClick} />
+			<BurgerMenuIcon className={styles.svg} onClick={handleClick} />
 			<Drawer
-				PaperProps={{ sx: { background: "rgba(0, 0, 0, 0.7)" } }}
+				PaperProps={{
+					sx: { background: "rgba(0, 0, 0, 0.7)", backdropFilter: "blur(4px)" },
+				}}
 				variant="temporary"
+				slotProps={{ backdrop: { sx: { backdropFilter: "blur(4px)" } } }}
 				open={showMenu}
 				onClose={() => setShowMenu(false)}
 			>

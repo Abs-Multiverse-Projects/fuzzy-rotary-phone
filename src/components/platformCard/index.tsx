@@ -7,9 +7,9 @@ import TextField from "@mui/material/TextField";
 import FormGroup from "@mui/material/FormGroup";
 import FormControl from "@mui/material/FormControl";
 import Button from "@mui/material/Button";
-import { ReactComponent as PlaystationLogo } from "../../assets/playstation-icon.svg";
-import { ReactComponent as SteamLogo } from "../../assets/steam-icon.svg";
-import { ReactComponent as XboxLogo } from "../../assets/xbox-icon.svg";
+import PsIcon from "../svg/PsIcon";
+import SteamIcon from "../svg/SteamIcon";
+import XboxIcon from "../svg/XboxIcon";
 import { Platform } from "../../types/";
 
 interface Props {
@@ -24,7 +24,7 @@ const PlatformCard: FC<Props> = ({ variant }) => {
 		variant === "xbox" ? "rgba(16, 124, 16, 0.93)" : "rgba(0, 112, 209, 0.7)";
 
 	const handleButtonClick = () => {
-		console.log(inputRef.current.value);
+		// handle button click here
 	};
 
 	return (
@@ -48,11 +48,11 @@ const PlatformCard: FC<Props> = ({ variant }) => {
 			/>
 			<CardContent className={styles.cardContent}>
 				{variant === "ps" ? (
-					<PlaystationLogo className={logoClasses} />
+					<PsIcon className={logoClasses} />
 				) : variant === "steam" ? (
-					<SteamLogo className={logoClasses} />
+					<SteamIcon className={logoClasses} />
 				) : (
-					<XboxLogo className={logoClasses} />
+					<XboxIcon className={logoClasses} />
 				)}
 			</CardContent>
 

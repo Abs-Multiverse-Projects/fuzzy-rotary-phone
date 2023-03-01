@@ -3,7 +3,7 @@
 .card {
 	min-width: 300px;
 	backdrop-filter: blur(4px);
-	
+
 	
 	.cardContent {
 		@include flex-container(row, center, center);
@@ -12,7 +12,7 @@
 		color: white;
 	}
 
-	.logo {
+	svg {
 		width: 115px;
 		height: 115px;
 		padding: 0;
