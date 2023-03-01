@@ -1,0 +1,26 @@
+@import "../../App.module.scss";
+
+.container {
+	height: 100vh;
+	width: 100vw;
+	// position: fixed;
+	// top: 0;
+	z-index: -1; // to allow burger menu to show on homepage
+	overflow-y: scroll;
+	background: black;
+	background-image: url('../../assets/bg.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-inline: 4rem;
+
+}
+
+.mainTitle {
+	@include flex-container(row, center, center);
+	font-family: 'Cyberpunk';
+	font-size: 80px;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	padding: 20px;
+}
