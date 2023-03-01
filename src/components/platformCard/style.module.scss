@@ -1,0 +1,25 @@
+@import '../../App.module.scss';
+
+.card {
+	min-width: 300px;
+	backdrop-filter: blur(4px);
+
+	
+	.cardContent {
+		@include flex-container(row, center, center);
+		padding: 0 !important; // overriding mui default styling
+		font-size: 40px;
+		color: white;
+	}
+
+	svg {
+		width: 115px;
+		height: 115px;
+		padding: 0;
+		margin: 0;
+	}
+
+	.formGroup {
+		@include flex-container(row, flex-start, stretch);
+	}
+}

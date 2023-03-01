@@ -1,0 +1,48 @@
+@import '../../App.module.scss';
+
+.svg {
+	position: fixed;
+	top: 0;
+	margin: 20px;
+	cursor: pointer;
+}
+
+.navMenu {
+	@include flex-container(column, flex-start, flex-start);
+	font-size: 24px;
+	padding: 60px 45px 0 0;
+
+	::before {
+		content: '';
+		height: 100%;
+		padding-inline: 7px;
+		margin-right: 10px;
+		background: white;
+	}
+	
+	.menuItem {
+		width: 100%;
+		padding-block: 12px;
+		padding-inline: 10px;
+		color: $lightBaseColor;
+		transition: all .3s ease-in-out;
+		// border: 1px solid white;
+
+		&:hover {
+			transform: translateX(10px);
+			color: $baseColor;
+			box-shadow: 0px 0px 35px $baseColor inset;
+		}
+}
+
+}
+
+.fadeIn {
+	opacity: 1;
+	transition: width .5s, height .5s, opacity .5s .5s;
+}
+
+.fadeOut {
+	opacity: 0; 
+	transition: width .5s .5s, height .5s .5s, opacity .5s;
+}
