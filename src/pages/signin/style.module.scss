@@ -1,0 +1,47 @@
+@import "../../App.module.scss";
+
+// TODO: Add media queries to make responsive........
+
+.mainContainer {
+	min-width: 560px !important;
+	max-width: 600px !important;
+	height: 60vh;
+	background: rgba(256, 256, 256, 0.95);
+	backdrop-filter: blur(4px);
+
+	.outerBox {
+		@include flex-container(column, center, center);
+		padding: $lightPadding;
+		height: calc(100% - ($lightPadding * 2));
+
+		.formBox {
+			@include flex-container(column, space-between, center);
+			width: 100%;
+			height: 100%;
+			padding-block: $lightPadding;
+
+			.formInputs {
+				width: 100%;
+
+				& * {
+					padding-block: 6px;
+				}
+			}
+
+			.formActions {
+				@include flex-container(column, center, center);
+				width: 100%; // required because of the align-items: center; above
+
+				.supportLinksContainer {
+					@include flex-container(row, space-between, center);
+					width: 100%;
+					padding-top: 5px;
+
+					.forgotPasswordLink {
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+}

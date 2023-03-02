@@ -1,5 +1,6 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import styles from "./style.module.scss";
+import { Link } from "react-router-dom";
 import BurgerMenuIcon from "../svg/BurgerMenuIcon";
 import Drawer from "@mui/material/Drawer";
 
@@ -23,9 +24,9 @@ const Navbar: FC = () => {
 				onClose={() => setShowMenu(false)}
 			>
 				<div className={styles.navMenu}>
-					<a href="#" className={styles.menuItem}>
+					<Link to="/signin" className={styles.menuItem}>
 						Sign in
-					</a>
+					</Link>
 					<a href="#" className={styles.menuItem}>
 						Leaderboard
 					</a>
