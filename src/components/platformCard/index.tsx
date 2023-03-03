@@ -69,8 +69,9 @@ const PlatformCard: FC<Props> = ({ variant }) => {
 					/>
 				</FormControl>
 				<Button
-					variant="outlined"
-					color="secondary"
+					variant="text"
+					sx={{ background: "white", "&:hover": { color: "white" } }}
+					color="primary"
 					onClick={handleButtonClick}
 				>
 					connect

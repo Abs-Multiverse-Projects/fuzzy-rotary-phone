@@ -10,6 +10,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
+import { lime } from "@mui/material/colors";
 
 const SignIn: FC = () => {
 	const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -23,8 +24,8 @@ const SignIn: FC = () => {
 				<></>
 				<Container className={styles.mainContainer}>
 					<Box className={styles.outerBox}>
-						<Avatar>
-							<LockOutlinedIcon />
+						<Avatar sx={{ bgcolor: lime.A200 }}>
+							<LockOutlinedIcon htmlColor="black" />
 						</Avatar>
 						<Typography component="h1" variant="h5">
 							Sign in

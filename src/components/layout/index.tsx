@@ -1,4 +1,5 @@
 import { ReactNode, FC } from "react";
+import { Link } from "react-router-dom";
 import styles from "./style.module.scss";
 import Navbar from "../navbar";
 
@@ -13,7 +14,9 @@ const Layout: FC<Props> = ({ className, children, removeNav }) => {
 		<>
 			<div className={`${styles.container} ${className}`}>
 				{!removeNav ? <Navbar /> : ""}
-				<h1 className={styles.mainTitle}>Central Gaming Intelligence</h1>
+				<Link to="/" className={styles.mainTitle}>
+					Central Gaming Intelligence
+				</Link>
 				{children}
 			</div>
 		</>

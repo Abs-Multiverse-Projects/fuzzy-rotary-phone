@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import styles from "./style.module.scss";
 import { Link } from "react-router-dom";
 import BurgerMenuIcon from "../svg/BurgerMenuIcon";
+import NavItem from "../navItem";
 import Drawer from "@mui/material/Drawer";
 
 const Navbar: FC = () => {
@@ -24,15 +25,9 @@ const Navbar: FC = () => {
 				onClose={() => setShowMenu(false)}
 			>
 				<div className={styles.navMenu}>
-					<Link to="/signin" className={styles.menuItem}>
-						Sign in
-					</Link>
-					<a href="#" className={styles.menuItem}>
-						Leaderboard
-					</a>
-					<a href="#" className={styles.menuItem}>
-						Recommended games
-					</a>
+					<NavItem linkTo="/signin" text="Sign in" />
+					<NavItem linkTo="/" text="Leaderboard" />
+					<NavItem linkTo="/" text="Recommended games" />
 				</div>
 			</Drawer>
 		</div>

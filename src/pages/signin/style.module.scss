@@ -6,8 +6,9 @@
 	min-width: 560px !important;
 	max-width: 600px !important;
 	height: 60vh;
-	background: rgba(256, 256, 256, 0.95);
+	background: rgba(white, 0.8);
 	backdrop-filter: blur(4px);
+	border-radius: $medBorderRadius;
 
 	.outerBox {
 		@include flex-container(column, center, center);
