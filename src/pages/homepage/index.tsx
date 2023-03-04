@@ -25,7 +25,7 @@ const Home: FC = () => {
 		<Layout className={styles.container}>
 			<></>
 			<div>
-				
+
 			</div>
 		</Layout>
 	);
