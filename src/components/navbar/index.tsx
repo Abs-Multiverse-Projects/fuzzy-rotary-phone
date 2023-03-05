@@ -1,6 +1,5 @@
 import { FC, useState, useContext } from "react";
 import styles from "./style.module.scss";
-import { Link } from "react-router-dom";
 import BurgerMenuIcon from "../svg/BurgerMenuIcon";
 import NavItem from "../navItem";
 import Drawer from "@mui/material/Drawer";
@@ -33,7 +32,7 @@ const Navbar: FC = () => {
 					) : (
 						<NavItem linkTo="/signin" text="Sign in" />
 					)}
-					<NavItem linkTo="/" text="Leaderboard" />
+					<NavItem linkTo="/games" text="Leaderboard" />
 					<NavItem linkTo="/" text="Recommended games" />
 				</div>
 			</Drawer>

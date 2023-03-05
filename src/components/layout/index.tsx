@@ -5,7 +5,7 @@ import Navbar from "../navbar";
 
 interface Props {
 	className?: string;
-	children?: ReactNode[] | string;
+	children?: ReactNode[] | ReactNode | string;
 	removeNav?: boolean;
 }
 
