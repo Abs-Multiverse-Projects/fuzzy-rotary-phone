@@ -1,10 +1,10 @@
 import { FC, createContext, useState } from "react";
-import { AppContext } from "./types";
+import { AppContext } from "types";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/homepage";
-import SignIn from "./pages/signin";
-import GamesPage from "./pages/games";
-import styles from "./App.module.scss";
+import Home from "pages/homepage";
+import SignIn from "pages/signin";
+import GamesPage from "pages/games";
+import styles from "App.module.scss";
 
 export const SignedInContext: React.Context<AppContext> = createContext(
 	{} as AppContext

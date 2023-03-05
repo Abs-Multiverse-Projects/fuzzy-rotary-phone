@@ -5,8 +5,7 @@ import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { style } from "@mui/system";
-import { Platform } from "../../types";
+import { Platform } from "types";
 
 interface Props {
 	imgSrc: string;
@@ -30,12 +29,12 @@ const GameCard: FC<Props> = ({ imgSrc, title, platform }) => {
 						sx={{ height: "100%", width: "100%" }}
 					/>
 				</CardActionArea>
-			<div
-				style={{ border: `2px solid ${borderColor}` }}
-				className={styles.imageOverlay}
-			>
-				{platform.toUpperCase()}
-			</div>
+				<div
+					style={{ border: `2px solid ${borderColor}` }}
+					className={styles.imageOverlay}
+				>
+					{platform.toUpperCase()}
+				</div>
 			</Card>
 			<Typography className={styles.cardTitle} p={1}>
 				{title}

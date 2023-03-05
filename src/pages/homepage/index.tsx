@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import styles from "./style.module.scss";
-import Layout from "../../components/layout";
-import PlatformCard from "../../components/platformCard";
+import Layout from "components/layout";
+import PlatformCard from "components/platformCard";
 import Grid from "@mui/material/Grid";
 
 const Home: FC = () => {
@@ -24,9 +24,7 @@ const Home: FC = () => {
 	return (
 		<Layout className={styles.container}>
 			<></>
-			<div>
-
-			</div>
+			<div></div>
 		</Layout>
 	);
 };

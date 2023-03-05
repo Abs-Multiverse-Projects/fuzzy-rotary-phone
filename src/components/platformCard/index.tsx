@@ -7,10 +7,10 @@ import TextField from "@mui/material/TextField";
 import FormGroup from "@mui/material/FormGroup";
 import FormControl from "@mui/material/FormControl";
 import Button from "@mui/material/Button";
-import PsIcon from "../svg/PsIcon";
-import SteamIcon from "../svg/SteamIcon";
-import XboxIcon from "../svg/XboxIcon";
-import { Platform } from "../../types/";
+import PsIcon from "components/svg/PsIcon";
+import SteamIcon from "components/svg/SteamIcon";
+import XboxIcon from "components/svg/XboxIcon";
+import { Platform } from "types/";
 
 interface Props {
 	variant: Platform;

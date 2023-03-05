@@ -1,9 +1,9 @@
 import { FC, useState, useContext } from "react";
 import styles from "./style.module.scss";
-import BurgerMenuIcon from "../svg/BurgerMenuIcon";
-import NavItem from "../navItem";
+import BurgerMenuIcon from "components/svg/BurgerMenuIcon";
+import NavItem from "components/navItem";
 import Drawer from "@mui/material/Drawer";
-import { SignedInContext } from "../../App";
+import { SignedInContext } from "App";
 
 const Navbar: FC = () => {
 	const [showMenu, setShowMenu] = useState<boolean>(false);

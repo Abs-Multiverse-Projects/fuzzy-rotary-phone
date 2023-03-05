@@ -1,9 +1,9 @@
 import { FC, useContext } from "react";
-import { SignedInContext } from "../../App";
-import { AppContext } from "../../types";
+import { SignedInContext } from "App";
+import { AppContext } from "types";
 import styles from "./style.module.scss";
-import Layout from "../../components/layout";
-import GameCard from "../../components/gameCard";
+import Layout from "components/layout";
+import GameCard from "components/gameCard";
 import Container from "@mui/material/Container";
 
 const GamesPage: FC = () => {

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from "./style.module.scss";
-import Layout from "../../components/layout";
+import Layout from "components/layout";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";

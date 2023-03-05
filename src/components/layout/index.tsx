@@ -1,7 +1,7 @@
 import { ReactNode, FC } from "react";
 import { Link } from "react-router-dom";
 import styles from "./style.module.scss";
-import Navbar from "../navbar";
+import Navbar from "components/navbar";
 
 interface Props {
 	className?: string;
