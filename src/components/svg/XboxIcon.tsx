@@ -46,10 +46,10 @@ const XboxIcon: FC<Props> = ({ className }) => {
 					gradientUnits="userSpaceOnUse"
 					gradientTransform="translate(16 14.5) rotate(90.0548) scale(15.5)"
 				>
-					<stop stop-color="#FAFAFA" />
-					<stop offset="0.499976" stop-color="#EFEFEF" />
-					<stop offset="0.828794" stop-color="#C0BEC0" />
-					<stop offset="1" stop-color="#879288" />
+					<stop stopColor="#FAFAFA" />
+					<stop offset="0.499976" stopColor="#EFEFEF" />
+					<stop offset="0.828794" stopColor="#C0BEC0" />
+					<stop offset="1" stopColor="#879288" />
 				</radialGradient>
 				<linearGradient
 					id="paint1_linear_87_8329"
@@ -59,8 +59,8 @@ const XboxIcon: FC<Props> = ({ className }) => {
 					y2="12.7852"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop stop-color="#008B00" />
-					<stop offset="1" stop-color="#6CC329" />
+					<stop stopColor="#008B00" />
+					<stop offset="1" stopColor="#6CC329" />
 				</linearGradient>
 				<linearGradient
 					id="paint2_linear_87_8329"
@@ -70,8 +70,8 @@ const XboxIcon: FC<Props> = ({ className }) => {
 					y2="16.4"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop stop-color="#008C00" />
-					<stop offset="1" stop-color="#48BF21" />
+					<stop stopColor="#008C00" />
+					<stop offset="1" stopColor="#48BF21" />
 				</linearGradient>
 				<linearGradient
 					id="paint3_linear_87_8329"
@@ -81,8 +81,8 @@ const XboxIcon: FC<Props> = ({ className }) => {
 					y2="12.7852"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop stop-color="#008B00" />
-					<stop offset="1" stop-color="#6CC329" />
+					<stop stopColor="#008B00" />
+					<stop offset="1" stopColor="#6CC329" />
 				</linearGradient>
 				<linearGradient
 					id="paint4_linear_87_8329"
@@ -92,8 +92,8 @@ const XboxIcon: FC<Props> = ({ className }) => {
 					y2="16.4"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop stop-color="#008C00" />
-					<stop offset="1" stop-color="#48BF21" />
+					<stop stopColor="#008C00" />
+					<stop offset="1" stopColor="#48BF21" />
 				</linearGradient>
 			</defs>
 		</svg>
