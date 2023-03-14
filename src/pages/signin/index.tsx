@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import styles from "./style.module.scss";
 import Layout from "components/layout";
 import Avatar from "@mui/material/Avatar";
@@ -21,7 +21,6 @@ const SignIn: FC = () => {
 	return (
 		<>
 			<Layout>
-				<></>
 				<Container className={styles.mainContainer}>
 					<Box className={styles.outerBox}>
 						<Avatar sx={{ bgcolor: lime.A200 }}>

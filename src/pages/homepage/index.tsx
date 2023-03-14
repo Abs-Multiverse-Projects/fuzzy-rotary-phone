@@ -15,7 +15,7 @@ const Home: FC = () => {
 					<></>
 					<Grid className={styles.grid} mt="4rem">
 						<PlatformCard variant="xbox" />
-						<PlatformCard variant="ps" />
+						<PlatformCard variant="PS5" />
 						<PlatformCard variant="steam" />
 					</Grid>
 				</Layout>

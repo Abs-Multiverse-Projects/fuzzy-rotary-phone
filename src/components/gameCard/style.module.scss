@@ -3,17 +3,19 @@
 .gameCardBox {
 	display: inline-block;
 	color: white;
-	max-width: 400px;
+	width: 400px;
+	height: 400px;
 	padding: $lightPadding;
 
 	.card {
-		width: 300px;
+		height: 80%;
 		border-radius: $medBorderRadius !important;
 		position: relative;
 		
 		.cardActionArea {
 			height: 100%;
 			width: 100%;
+			background: black;
 		}
 
 		.imageOverlay {
@@ -36,8 +38,6 @@
 
 @media (max-width: 900px) {
 	.card {
-		width: 200px !important;
-
 		.imageOverlay {
 			font-size: 15px !important;
 		}
@@ -51,8 +51,6 @@
 @media (max-width: 700px) {
 
 	.card {
-		width: 100px !important;
-
 		.imageOverlay {
 			left: 7% !important;
 			padding: 0px 0px 10px 0px !important;

@@ -21,13 +21,7 @@ const GameCard: FC<Props> = ({ imgSrc, title, platform }) => {
 		<Box className={styles.gameCardBox}>
 			<Card raised className={styles.card}>
 				<CardActionArea className={styles.cardActionArea}>
-					<CardMedia
-						component="img"
-						height={100}
-						image={imgSrc}
-						alt="This is an image"
-						sx={{ height: "100%", width: "100%" }}
-					/>
+					<CardMedia component="img" image={imgSrc} alt={title} />
 				</CardActionArea>
 				<div
 					style={{ border: `2px solid ${borderColor}` }}
@@ -37,7 +31,7 @@ const GameCard: FC<Props> = ({ imgSrc, title, platform }) => {
 				</div>
 			</Card>
 			<Typography className={styles.cardTitle} p={1}>
-				{title}
+				{title.replace("Trophies", "")}
 			</Typography>
 		</Box>
 	);

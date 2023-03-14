@@ -10,27 +10,30 @@ export const SignedInContext: React.Context<AppContext> = createContext(
 	{} as AppContext
 );
 
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <Home />,
-		// TODO: errorElement: <ErrorPage />
-	},
-	{
-		path: "/signin",
-		element: <SignIn />,
-	},
-	{
-		path: "/games",
-		element: <GamesPage />,
-	},
-]);
-
 const App: FC = () => {
 	const [signedIn, setSignedIn] = useState<boolean>(false);
+	const [userName, setUserName] = useState<string>("");
+
+	const router = createBrowserRouter([
+		{
+			path: "/",
+			element: <Home />,
+			// TODO: errorElement: <ErrorPage />
+		},
+		{
+			path: "/signin",
+			element: <SignIn />,
+		},
+		{
+			path: "/games",
+			element: <GamesPage />,
+		},
+	]);
 
 	return (
-		<SignedInContext.Provider value={{ signedIn, setSignedIn }}>
+		<SignedInContext.Provider
+			value={{ signedIn, setSignedIn, userName, setUserName }}
+		>
 			<RouterProvider router={router} />
 		</SignedInContext.Provider>
 	);
