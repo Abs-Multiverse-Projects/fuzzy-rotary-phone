@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { FC, useContext, useRef } from "react";
 import styles from "./style.module.scss";
 import Layout from "components/layout";
 import Avatar from "@mui/material/Avatar";
@@ -11,11 +11,25 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import { lime } from "@mui/material/colors";
+import { AppContext } from "types";
+import { SignedInContext } from "App";
+import { NavigateFunction, useNavigate } from "react-router";
 
 const SignIn: FC = () => {
+	const { signedIn, setSignedIn, userName, setUserName }: AppContext =
+		useContext(SignedInContext);
+
+	const inputRef = useRef<HTMLInputElement>(null);
+
+	const navigate: NavigateFunction = useNavigate();
+
+	const handleInputChange = () => {
+		if (inputRef?.current?.value) setUserName(inputRef.current.value);
+	};
+
 	const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 		e.preventDefault();
-		console.log("hello :)");
+		navigate(`/${userName}/home`);
 	};
 
 	return (
@@ -39,6 +53,8 @@ const SignIn: FC = () => {
 									label="username"
 									name="username"
 									autoFocus
+									inputRef={inputRef}
+									inputProps={{ onChange: handleInputChange }}
 								/>
 								<TextField
 									required
