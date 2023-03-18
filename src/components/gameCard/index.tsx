@@ -30,7 +30,7 @@ const GameCard: FC<Props> = ({ imgSrc, title, platform }) => {
 					{platform.toUpperCase()}
 				</div>
 			</Card>
-			<Typography className={styles.cardTitle} p={1}>
+			<Typography className={styles.cardTitle} p={1} data-text={title.replace("Trophies", "")}>
 				{title.replace("Trophies", "")}
 			</Typography>
 		</Box>

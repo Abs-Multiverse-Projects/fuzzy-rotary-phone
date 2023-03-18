@@ -33,12 +33,13 @@ const GamesPage: FC = () => {
 	return (
 		<Layout>
 			<Container className={styles.gamesContainer}>
-				{titlesList?.map((title) => {
+				{titlesList?.map((title, index) => {
 					return (
 						<GameCard
 							imgSrc={title.trophyTitleIconUrl}
 							title={title.trophyTitleName}
 							platform={title.trophyTitlePlatform}
+							key={index}
 						/>
 					);
 				})}

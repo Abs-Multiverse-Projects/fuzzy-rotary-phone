@@ -47,7 +47,7 @@ const PlatformCard: FC<Props> = ({ variant }) => {
 				}}
 			/>
 			<CardContent className={styles.cardContent}>
-				{variant === "ps" ? (
+				{variant === "PS5" || variant === "PS4" ? (
 					<PsIcon className={logoClasses} />
 				) : variant === "steam" ? (
 					<SteamIcon className={logoClasses} />
