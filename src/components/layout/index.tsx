@@ -12,7 +12,7 @@ interface Props {
 const Layout: FC<Props> = ({ className, children, removeNav }) => {
 	return (
 		<>
-			<div className={`${styles.container} ${className}`}>
+			<div className={`${styles.container} ${className ?? ""}`}>
 				{!removeNav ? <Navbar /> : ""}
 				<Link to="/" className={styles.mainTitle}>
 					Central Gaming Intelligence

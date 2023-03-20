@@ -80,4 +80,9 @@ export interface UserTitlesResponse {
 	totalItemCount: number;
 	nextOffset?: number;
 	previousOffset?: number;
+	error?: {
+		code: number;
+		message: string;
+		referenceId: string;
+	};
 }

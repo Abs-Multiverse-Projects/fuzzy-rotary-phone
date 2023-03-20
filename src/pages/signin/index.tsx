@@ -29,6 +29,7 @@ const SignIn: FC = () => {
 
 	const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 		e.preventDefault();
+		setSignedIn(true);
 		navigate(`/${userName}/home`);
 	};
 

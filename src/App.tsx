@@ -23,11 +23,16 @@ const router = createBrowserRouter([
 	{
 		path: "/games",
 		element: <GamesPage />,
+		errorElement: <UserHomePage error />
 	},
 	{
 		path: `/:username/home`,
 		element: <UserHomePage />,
 	},
+	{
+		path: "/404",
+		element: <UserHomePage error />
+	}
 ]);
 
 const App: FC = () => {

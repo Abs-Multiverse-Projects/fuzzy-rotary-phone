@@ -7,10 +7,14 @@ import GameCard from "components/gameCard";
 import Container from "@mui/material/Container";
 import PsnApi from "api/psn";
 import { TrophyTitle } from "api/psn/types";
+import { NavigateFunction, useNavigate } from "react-router";
 
 const GamesPage: FC = () => {
-	const { signedIn, setSignedIn, userName, setUserName }: AppContext = useContext(SignedInContext);
+	const { signedIn, setSignedIn, userName, setUserName }: AppContext =
+		useContext(SignedInContext);
 	const [titlesList, setTitlesList] = useState<TrophyTitle[]>();
+	const [error, setError] = useState<boolean>(false);
+	const navigate: NavigateFunction = useNavigate();
 
 	const initialiseUser = async (username: string) => {
 		const initAuth = await PsnApi.authenticate(import.meta.env.VITE_NPSSO);
@@ -18,6 +22,10 @@ const GamesPage: FC = () => {
 		const user = await psnApi.getProfileFromUserName(username);
 		const userTitles = await psnApi.getTitles(user.profile.profile.accountId);
 		console.log(userTitles);
+		if (userTitles.titles.error) {
+			setError(true);
+		}
+
 		let titles: TrophyTitle[] = [];
 		userTitles.titles.trophyTitles.forEach((title) => {
 			titles.push(title);
@@ -27,8 +35,11 @@ const GamesPage: FC = () => {
 
 	useEffect(() => {
 		initialiseUser(userName);
-		console.log(titlesList);
 	}, [titlesList?.length]);
+
+	useEffect(() => {
+		if (error) throw Error();
+	}, [error]);
 
 	return (
 		<Layout>

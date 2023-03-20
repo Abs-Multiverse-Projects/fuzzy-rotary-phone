@@ -1,0 +1,24 @@
+@import "/src/App.module.scss";
+
+.errorBackground {
+	@include flex-container(row, center, center);
+	height: 100vh;
+	padding-inline: $mediumPadding;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	backdrop-filter: blur(4px);
+
+	.text {
+
+		.userName {
+			color: $baseColor;
+		}
+
+		.signInLink {
+			color: $lightBaseColor;
+			text-decoration: underline;
+		}
+	}
+}
